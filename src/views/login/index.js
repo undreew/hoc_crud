@@ -1,8 +1,13 @@
 import React from 'react';
 import PublicPage from '../../components/Page/PublicPage';
+import LoginSection from './LoginSection';
 
 function Index() {
-	return <PublicPage></PublicPage>;
+	return (
+		<PublicPage>
+			<LoginSection />
+		</PublicPage>
+	);
 }
 
 export default Index;

@@ -14,11 +14,11 @@ function AlertContextProvider(props) {
 		});
 	}
 
-	function handleError(errorMessage) {
+	function handleError(error) {
 		swal.fire({
 			icon: 'error',
 			title: 'Something went wrong!',
-			text: errorMessage ? errorMessage : null,
+			text: error ? error.message : null,
 		});
 	}
 

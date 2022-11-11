@@ -6,11 +6,11 @@ function PrivateRoute(props) {
 	const {children} = props;
 	const {isAuth} = useAuth();
 
-	// if (isAuth) {
-	// 	return children;
-	// }
+	if (isAuth) {
+		return children;
+	}
 
-	return isAuth ? children : <Navigate replace={true} to='/' />;
+	return <Navigate replace={true} to='/' />;
 }
 
 export default PrivateRoute;

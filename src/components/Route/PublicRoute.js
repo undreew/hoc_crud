@@ -10,7 +10,7 @@ function PublicRoute(props) {
 		return children;
 	}
 
-	return <Navigate replace={true} to='/sectors' />;
+	return <Navigate replace={true} to='/posts' />;
 }
 
 export default PublicRoute;
