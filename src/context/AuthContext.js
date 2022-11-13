@@ -43,8 +43,6 @@ function AuthContextProvider(props) {
 			cookies.set(COOKIE_NAME, token, {expires: today});
 
 			setIsAuth(true);
-
-			handleOk();
 		} catch (error) {
 			handleError(error.message);
 		}

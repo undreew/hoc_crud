@@ -5,8 +5,8 @@ import {useAuth} from '../../context/AuthContext';
 
 const navLinks = [
 	{
-		to: '/',
-		text: 'Sectors',
+		to: '/posts',
+		text: 'Posts',
 	},
 	{
 		to: '/login',
@@ -20,6 +20,12 @@ function Navigation() {
 	return (
 		<nav>
 			{navLinks.map((item, index) => {
+				const {to} = item;
+
+				if (to === '/login' && isAuth) {
+					return null;
+				}
+
 				return (
 					<Link key={index} to={item.to}>
 						{item.text}

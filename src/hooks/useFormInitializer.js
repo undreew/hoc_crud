@@ -1,7 +1,7 @@
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 
-import {loginFormSchema, sectorFormSchema} from '../utils/formSchemas';
+import {loginFormSchema, postFormSchema} from '../utils/formSchemas';
 
 function formType(type) {
 	switch (type) {
@@ -11,8 +11,8 @@ function formType(type) {
 		case 'login':
 			return loginFormSchema;
 
-		case 'sector':
-			return sectorFormSchema;
+		case 'post':
+			return postFormSchema;
 
 		default:
 			break;

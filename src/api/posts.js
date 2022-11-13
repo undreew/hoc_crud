@@ -1,7 +1,7 @@
 import http from '../utils/http';
 
 export function getPost(id) {
-	return http('GET', '/post', id);
+	return http('GET', `/post/${id}`);
 }
 
 export function getPosts(queries) {
@@ -9,7 +9,7 @@ export function getPosts(queries) {
 }
 
 export function addPost(data) {
-	return http('POST', '/post');
+	return http('POST', '/post', data);
 }
 
 export function editPost(id, data) {

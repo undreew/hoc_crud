@@ -1,9 +1,9 @@
-import {http} from '../utils/http';
+import http from '../utils/http';
 
-export const authSignup = (formData) => {
-	return http('POST', '/auth/signup', formData);
+export const authSignup = (data) => {
+	return http('POST', '/auth/signup', data);
 };
 
-export const authLogin = (formData) => {
-	return http('POST', '/auth/login', formData);
+export const authLogin = (data) => {
+	return http('POST', '/auth/login', data);
 };
